@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">para1</p>
+    <p style="color: blue;"   id="p2">para2</p>
+    <img  id="img1" src="mustang.jpg" height="200px" width="200px" alt="no image"><br>
+    <button onclick="changecontent()">click me to change content</button><br>
+    <button onclick="documentoutput()">click me to change content</button><br>
+    <button onclick="changeattributevalue()">click me to change content</button><br>
+    <button onclick="changecolor()">click me to change content</button><br>
+
+
+    <script>
+        function changecontent()
+        {
+            document.getElementById('p1').innerHTML="hello world";
+
+        }
+        function documentoutput()
+        {
+            document.write("document output")
+
+        }
+        function changeattributevalue()
+        {
+            document.getElementById('img1').src="google.jpg";
+        }
+        function changecolor()
+        {
+            document.getElementById('p2').style.color='yellow';
+        }
+
+    </script>
+</body>
+</html>

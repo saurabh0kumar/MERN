@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="tablename" id="tablename" placeholder="enter table name"><br>
+    <input type="text" name="tablelimit" id="tablelimit" placeholder="enter table limit"><br>
+    <button onclick="generatetable()">generate table</button>
+
+    <script>
+        function generatetable()
+        {
+            let limit=Number(document.getElementById('tablelimit').value);
+            let tablename=Number(document.getElementById('tablename').value);
+            for(let i=1;i<limit;i++)
+            {
+                document.write(tablename+"*"+i+"-"+(tablename*i)+"<br>")
+            }
+        }
+    </script>
+
+</body>
+</html>
