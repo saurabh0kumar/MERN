@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <button onclick="alertwindow()">alert twindow</button>
+        <button ondblclick="confirmwindow()">confirm window</button>
+        <button onmouseover="promtwindow()">promt window</button>
+        <button onclick="openwindow()">open window</button>
+    <script>
+        function alertwindow()
+        {
+            alert("this is alert window");
+        }
+        function confirmwindow()
+        {
+            let result=confirm("do u really want to close");
+            if(result==true)
+            {
+                alert("clicked ok");
+            }
+            else
+            {
+                alert("clicled no");
+            }
+        }
+        function promtwindow()
+        {
+            let age=prompt("enterb your age");
+            let name=prompt("enter your name");
+            alert("your name"+name+"your age"+age);
+        }
+        function openwindow()
+        {
+            window.open("https://www.google.co.in/")
+        }
+    </script>
+</body>
+</html>
