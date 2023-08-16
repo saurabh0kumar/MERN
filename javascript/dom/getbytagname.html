@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>para1</p>
+    <p>para 2</p>
+    <p>para 3</p>
+    <script>
+        let para=document.getElementsByTagName("p")[1];
+        console.log(para);
+        let value=para.childNodes[1].nodeValue;
+        console.log(value);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>choose a gender</p>
+    <input type="radio" name="gender" value="male">male<br>
+    <input type="radio" name="gender" value="female">female<br>
+
+    <p>choose your course</p>
+    <input type="radio" name="course" value="backend">backend
+     <input type="radio" name="course" value="cloud">cloud
+      <input type="radio" name="course" value="frontend">frontend
+
+      <script>
+        let courses=document.getElementsByName("gender");
+        console.log(courses);
+        console.log(courses.length);
+        
+        let value=courses[0].value;
+            console.log(value);
+      </script>
+
+</body>
+</html>
