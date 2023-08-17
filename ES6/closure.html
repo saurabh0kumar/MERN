@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function outer(a)
+    {
+        return function inner(b)
+        {
+            console.log(a);
+            console.log(b);
+        return a+b;
+        }
+    }
+    let result=outer(10);
+    console.log(result(20));
+   </script> 
+</body>
+</html>
