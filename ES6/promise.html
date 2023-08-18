@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=true;
+
+        let prom=new Promise(function(resolve,reject)
+        {
+            if(x)
+            {
+                resolve("SEE You next week");
+
+            }
+            else
+            {
+                reject("see you");
+
+            }
+
+        }
+        );
+        console.log(prom);
+    </script>
+</body>
+</html>
