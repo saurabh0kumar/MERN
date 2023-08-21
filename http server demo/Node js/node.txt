@@ -1,0 +1,31 @@
+node js,npm
+
+module-
+core module:
+http-by using http module we can create http server.
+fs-
+url-
+
+built in js code is written and used to achieve the functionality
+(it comes with node js)
+
+application
+*web application
+*desktop
+#client access the server(ex-browser,mobile app),sends req server
+#server is a system located in remoted location
+through internet we access server
+
+server-handles the client req
+--------------------------------------------------------
+
+
+why node js has been introduced?
+
+
+express js?
+web framework for node js
+
+node js>http>express js
+
+npm install -g nodemon
