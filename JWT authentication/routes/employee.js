@@ -7,6 +7,26 @@ const employees=[
     {id:2,name:"surav",dept:"hr",salary:3000},
     {id:3,name:"tejas",dept:"hr",salary:12200},
 ];
+
+function authenticateToken(res,res,next)
+{
+    const authHeader=req.header[`authorization`];
+    const token= authHeader && authHeader.split("")[1];
+
+    if(token==null)
+    {
+        return res.status(401).json.({message:`unauthorize`})
+    }
+    jwt.verify(token,`mysecretkey`,(err,data)=>
+    {
+        if(err)
+        {
+            return res.status(403).json({message:`forbidden`});
+        }
+        req.user=user;
+
+    });
+}
 router.get("/get",(req,res)=>
 {
     res.json(employees);
