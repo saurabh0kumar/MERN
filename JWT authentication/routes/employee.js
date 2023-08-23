@@ -10,12 +10,12 @@ const employees=[
 
 function authenticateToken(res,res,next)
 {
-    const authHeader=req.header[`authorization`];
+    const authHeader=req.headers["authorization"];
     const token= authHeader && authHeader.split("")[1];
 
     if(token==null)
     {
-        return res.status(401).json.({message:`unauthorize`})
+        return res.status(401).json.({message:`unauthorize`});
     }
     jwt.verify(token,`mysecretkey`,(err,data)=>
     {
@@ -24,10 +24,12 @@ function authenticateToken(res,res,next)
             return res.status(403).json({message:`forbidden`});
         }
         req.user=user;
+        next();
 
     });
+
 }
-router.get("/get",(req,res)=>
+router.get("/get",authenticateToken,(req,res)=>
 {
     res.json(employees);
 }
